@@ -16,6 +16,7 @@ export class DogsComponent {
   ]
 
   newDogPostForm = null;
+  selectedDogPost = null;
 
   addNewDogForm(){
     this.newDogPostForm = !null;
@@ -26,8 +27,12 @@ export class DogsComponent {
   }
 
   addDogPost(newDogPostFromChild: Post){
-    console.log("Hello")
     this.dogPostList.push(newDogPostFromChild)
+  }
+
+  deleteDogPost(currentDogPost){
+    var indexOf = this.dogPostList.indexOf(currentDogPost);
+    this.dogPostList.splice(indexOf,1)
   }
 
 

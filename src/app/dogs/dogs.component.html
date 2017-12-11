@@ -1,3 +1,13 @@
-<p>
-  dogs works!
-</p>
+<div class="dog-list">
+  <p (click)="addNewDogForm()">New Dog Post</p>
+  <div class="new-dog-post">
+    <app-new-dog-post [showChildDogForm]="newDogPostForm" (newDogSender)="addDogPost($event)" (closeDogFormSender)="nullNewDogForm($event)"></app-new-dog-post>
+  </div>
+  <div class="dog-post" *ngFor="let currentDogPost of dogPostList">
+    <h3>{{currentDogPost.title}}</h3>
+    <div class="">
+      <p>{{currentDogPost.content}}</p>
+    </div>
+  </div>
+
+</div>

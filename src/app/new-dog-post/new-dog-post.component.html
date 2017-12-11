@@ -1,0 +1,8 @@
+<div class="new-dog-form" *ngIf="showChildDogForm">
+  <p>Enter a new post below:</p>
+  <form id="new-dog-post">
+    <input type="text" #newTitle placeholder="Title">
+    <p><textarea row="4" cols="50" #newContent placeholder="Content"></textarea></p>
+    <p (click)="submitDogForm(newTitle.value, newContent.value)" (click)="closeDogForm()">Submit</p>
+  </form>
+</div>

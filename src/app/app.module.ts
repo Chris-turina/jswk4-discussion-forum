@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CatsComponent } from './cats/cats.component';
 import { TvsComponent } from './tvs/tvs.component';
+import { NewDogPostComponent } from './new-dog-post/new-dog-post.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TvsComponent } from './tvs/tvs.component';
     DogsComponent,
     WelcomeComponent,
     CatsComponent,
-    TvsComponent
+    TvsComponent,
+    NewDogPostComponent
   ],
   imports: [
     BrowserModule,

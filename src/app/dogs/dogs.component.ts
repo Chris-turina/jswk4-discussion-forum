@@ -35,5 +35,14 @@ export class DogsComponent {
     this.dogPostList.splice(indexOf,1)
   }
 
+  showContent(currentDogPost) {
+    if(currentDogPost.active){
+      console.log("X-mas Tree")
+      currentDogPost.active = false;
+    } else {
+      console.log("devil Tree")
+      currentDogPost.active = true;
+    }
+  }
 
 }

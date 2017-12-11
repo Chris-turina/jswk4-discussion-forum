@@ -4,8 +4,8 @@
     <app-new-dog-post [showChildDogForm]="newDogPostForm" (newDogSender)="addDogPost($event)" (closeDogFormSender)="nullNewDogForm($event)"></app-new-dog-post>
   </div>
   <div class="dog-post" *ngFor="let currentDogPost of dogPostList">
-    <h3>{{currentDogPost.title}}</h3>
-    <div class="">
+    <h3 (click)="showContent(currentDogPost)">{{currentDogPost.title}}</h3>
+    <div *ngIf="currentDogPost.active">
       <p>{{currentDogPost.content}}</p>
       <p (click)="deleteDogPost(currentDogPost)">delete</p>
     </div>

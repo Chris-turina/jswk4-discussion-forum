@@ -18,6 +18,8 @@ export class DogsComponent {
   newDogPostForm = null;
   selectedDogPost = null;
 
+
+
   addNewDogForm(){
     this.newDogPostForm = !null;
   }
@@ -34,6 +36,15 @@ export class DogsComponent {
     var indexOf = this.dogPostList.indexOf(currentDogPost);
     this.dogPostList.splice(indexOf,1)
   }
+
+  showEditForm(currentDogPost) {
+    if(currentDogPost.edit){
+      currentDogPost.edit = false;
+    } else {
+      currentDogPost.edit = true;
+    }
+  }
+
 
   showContent(currentDogPost) {
     if(currentDogPost.active){

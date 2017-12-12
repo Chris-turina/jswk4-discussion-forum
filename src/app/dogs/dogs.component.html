@@ -8,6 +8,14 @@
     <div *ngIf="currentDogPost.active">
       <p>{{currentDogPost.content}}</p>
       <p (click)="deleteDogPost(currentDogPost)">delete</p>
+      <button (click)="showEditForm(currentDogPost)">Edit</button>
+      <div class="showEdit" *ngIf="currentDogPost.edit">
+        <h3>Edit Post</h3>
+        <label>Edit Title:</label>
+        <input [(ngModel)]="currentDogPost.title">
+        <label>Edit Content:</label>
+        <input [(ngModel)]="currentDogPost.content">
+      </div>
     </div>
   </div>
 
